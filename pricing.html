@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hosting Gestionado | Precios — Adema Sistemas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    :root{
+      --font-family-sans:'Inter',sans-serif;
+      --color-background:#f8f9fa;
+      --color-surface:#ffffff;
+      --color-text-primary:#1e293b;
+      --color-text-secondary:#64748b;
+      --color-accent:#0f172a;
+      --color-success:#16a34a;
+      --color-info:#3b82f6;
+      --color-warning:#f59e0b;
+      --color-border:#e2e8f0;
+      --shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --border-radius:8px;
+    }
+    body{
+      font-family:var(--font-family-sans);
+      margin:0;
+      padding:40px 20px;
+      background-color:var(--color-background);
+      color:var(--color-text-primary);
+      line-height:1.7;
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      background-color:var(--color-surface);
+      padding:50px 60px;
+      box-shadow:var(--shadow);
+      border-radius:var(--border-radius);
+      border-top:5px solid var(--color-accent);
+    }
+    header{
+      text-align:center;
+      margin-bottom:40px;
+    }
+    header img{max-width:160px;margin-bottom:16px}
+    header h1{color:var(--color-accent);margin:0;font-size:2.2em;font-weight:700}
+    header p{color:var(--color-text-secondary);font-size:1.05em;margin:8px auto 0;max-width:680px}
+
+    h2{
+      color:var(--color-accent);
+      padding-bottom:12px;
+      margin-top:40px;
+      margin-bottom:20px;
+      font-size:1.3em;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      border-bottom:1px solid var(--color-border);
+      display:flex;align-items:center;gap:12px;
+    }
+    h2 .fa-solid{color:var(--color-info)}
+
+    .lead{color:var(--color-text-secondary)}
+    .brand-strip{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--color-border);border-radius:999px;background:#fff;color:var(--color-text-secondary);font-weight:600;font-size:.95em}
+    .pill i{color:#0ea5e9}
+
+    /* Steps */
+    .steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+    .card{background:#fff;border:1px solid var(--color-border);border-radius:10px;padding:18px 20px;box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 6px;font-size:1.05em}
+    .card p{margin:0;color:var(--color-text-secondary);font-size:1em}
+    .icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:#eef2ff;color:#1d4ed8}
+
+    /* Pricing */
+    .pricing-note{color:var(--color-text-secondary);font-size:.98em;margin-top:-6px}
+    .plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .plan{
+      position:relative;
+      background:#fff;border:1px solid var(--color-border);
+      border-radius:12px;padding:18px 18px 20px;box-shadow:var(--shadow);
+      display:flex;flex-direction:column;min-height:380px;
+    }
+    .plan.silver{ /* resalte + altura */
+      border-color:#bfdbfe;
+      box-shadow:0 8px 24px rgba(29,78,216,.12);
+      min-height:420px;
+    }
+    .badge{font-size:.72em;font-weight:700;border-radius:999px;padding:4px 8px;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--color-border);background:#f9fafb;color:#0f172a}
+    .medal{width:20px;height:20px;display:inline-block;vertical-align:middle}
+
+    .plan h3{margin:10px 0 6px;display:flex;align-items:center;gap:8px}
+    .price-row{margin:6px 0 6px;display:flex;align-items:flex-end;gap:8px}
+    .price-big{font-size:2rem;font-weight:800}
+    .sub{font-size:.95rem;color:var(--color-text-secondary)}
+    .mini{font-size:.9rem;color:var(--color-text-secondary);margin-top:2px}
+
+    .feat{list-style:none;padding:0;margin:10px 0 12px;display:flex;flex-direction:column;gap:8px}
+    .feat li{display:flex;gap:8px}
+    .feat i{color:var(--color-success);margin-top:2px}
+
+    .cta{margin-top:auto}
+    .btn{
+      display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;
+      background:var(--color-success);color:#fff;box-shadow:0 4px 12px rgba(22,163,74,.15);
+    }
+    .btn:hover{filter:brightness(1.05)}
+
+    .footer{ text-align:center;margin-top:40px;padding-top:24px;border-top:1px solid var(--color-border);font-size:.9em;color:#94a3b8 }
+
+    @media (max-width:768px){
+      body{padding:20px 10px}
+      .container{padding:30px 20px}
+      header h1{font-size:1.9em}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://ademasistemas.com/static/logo.png" alt="Logo Adema Sistemas"
+           onerror="this.onerror=null;this.src='https://placehold.co/160x40/0f172a/ffffff?text=AdemaSistemas';">
+      <h1>Hosting Gestionado para clientes de Adema Sistemas</h1>
+      <p class="lead">Servicio exclusivo para proyectos desarrollados por nuestro equipo. Vos elegís el <strong>dominio</strong>; nosotros desplegamos, configuramos y dejamos tu solución <strong>100% funcionando</strong>. Cuando crezca, <strong>escalamos</strong> CPU/RAM/disco sin migraciones ni cortes.</p>
+      <div class="brand-strip" aria-label="Proveedores de primer nivel">
+        <span class="pill"><i class="fa-solid fa-cloud"></i> DigitalOcean</span>
+        <span class="pill"><i class="fa-solid fa-cloud"></i> AWS EC2</span>
+        <span class="pill"><i class="fa-solid fa-cloud"></i> Google Cloud</span>
+      </div>
+    </header>
+
+    <main>
+      <h2><i class="fa-solid fa-shoe-prints"></i> Pasos simples</h2>
+      <section class="steps">
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>1) Definimos tu objetivo y dominio</h3>
+          <p>Te ayudamos a elegir el dominio ideal. Si ya tenés uno en otro proveedor, lo usamos y lo dejamos configurado sin complicaciones.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#ecfeff;color:#0369a1"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>2) Deploy y configuración completa</h3>
+          <p>Automatizamos el despliegue, activamos SSL, aplicamos seguridad y monitoreo. Todo listo y funcionando en tu dominio.</p>
+        </div>
+        <div class="card">
+          <div class="icon" style="background:#f0fdf4;color:#166534"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>3) Escalamos cuando crezca</h3>
+          <p>Si suben las visitas o la carga, ampliamos recursos en minutos, sin migraciones.</p>
+        </div>
+      </section>
+
+      <h2 id="precios"><i class="fa-solid fa-tags"></i> Planes y precios</h2>
+      <p class="pricing-note">Anual bonifica 2 meses (pagás 10×). Mostramos <strong>precio anual</strong>, <strong>equivalente mensual</strong> y <strong>mensual por 1 mes</strong>.</p>
+
+      <section class="plans" role="list">
+        <!-- BRONCE -->
+        <article class="plan" role="listitem" data-plan="bronce" data-month="20" data-year="200">
+          <span class="badge">
+            <!-- Medalla Bronze -->
+            <svg class="medal" viewBox="0 0 24 24" aria-hidden="true">
+              <defs><linearGradient id="bronzeg" x1="0" x2="1"><stop offset="0" stop-color="#b45309"/><stop offset="1" stop-color="#d97706"/></linearGradient></defs>
+              <circle cx="12" cy="12" r="10" fill="url(#bronzeg)" />
+              <text x="12" y="15" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#fff" font-weight="700">A</text>
+            </svg>
+            Esencial
+          </span>
+          <h3>Bronce</h3>
+          <div class="price-row"><span class="price-big" data-year>USD 200</span><small>/año</small></div>
+          <div class="sub" data-eqm>Equivale a USD 16.67 /mes</div>
+          <div class="mini">O por 1 mes: <strong data-month>USD 20</strong> /mes</div>
+          <ul class="feat">
+            <li><i class="fa-solid fa-check"></i> Operación y mantenimiento</li>
+            <li><i class="fa-solid fa-check"></i> SSL + monitoreo básico</li>
+            <li><i class="fa-solid fa-check"></i> Soporte en español</li>
+          </ul>
+          <div class="cta"><a class="btn" href="#contacto">Empezar</a></div>
+        </article>
+
+        <!-- PLATA -->
+        <article class="plan silver" role="listitem" data-plan="plata" data-month="35" data-year="350">
+          <span class="badge" style="border-color:#bfdbfe;background:#eff6ff">
+            <!-- Medalla Plata -->
+            <svg class="medal" viewBox="0 0 24 24" aria-hidden="true">
+              <defs><linearGradient id="silverg" x1="0" x2="1"><stop offset="0" stop-color="#6b7280"/><stop offset="1" stop-color="#9ca3af"/></linearGradient></defs>
+              <circle cx="12" cy="12" r="10" fill="url(#silverg)" />
+              <text x="12" y="15" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#fff" font-weight="700">A</text>
+            </svg>
+            Más elegido
+          </span>
+          <h3>
+            Plata
+          </h3>
+          <div class="price-row"><span class="price-big" data-year>USD 350</span><small>/año</small></div>
+          <div class="sub" data-eqm>Equivale a USD 29.17 /mes</div>
+          <div class="mini">O por 1 mes: <strong data-month>USD 35</strong> /mes</div>
+          <ul class="feat">
+            <li><i class="fa-solid fa-check"></i> Optimización continua</li>
+            <li><i class="fa-solid fa-check"></i> Backups planificados</li>
+            <li><i class="fa-solid fa-check"></i> Respuesta prioritaria</li>
+          </ul>
+          <div class="cta"><a class="btn" href="#contacto">Empezar</a></div>
+        </article>
+
+        <!-- ORO -->
+        <article class="plan" role="listitem" data-plan="oro" data-month="60" data-year="600">
+          <span class="badge" style="border-color:#fde68a;background:#fef3c7">
+            <!-- Medalla Oro -->
+            <svg class="medal" viewBox="0 0 24 24" aria-hidden="true">
+              <defs><linearGradient id="goldg" x1="0" x2="1"><stop offset="0" stop-color="#d97706"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs>
+              <circle cx="12" cy="12" r="10" fill="url(#goldg)" />
+              <text x="12" y="15" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#fff" font-weight="700">A</text>
+            </svg>
+            Premium
+          </span>
+          <h3>Oro</h3>
+          <div class="price-row"><span class="price-big" data-year>USD 600</span><small>/año</small></div>
+          <div class="sub" data-eqm>Equivale a USD 50.00 /mes</div>
+          <div class="mini">O por 1 mes: <strong data-month>USD 60</strong> /mes</div>
+          <ul class="feat">
+            <li><i class="fa-solid fa-check"></i> Alertas en tiempo real + WAF</li>
+            <li><i class="fa-solid fa-check"></i> Soporte 24/7</li>
+            <li><i class="fa-solid fa-check"></i> Escalado sin cortes</li>
+          </ul>
+          <div class="cta"><a class="btn" href="#contacto">Empezar</a></div>
+        </article>
+      </section>
+
+      <h2 id="contacto"><i class="fa-solid fa-headset"></i> ¿Te ayudamos a elegir?</h2>
+      <p class="lead">Escribinos y vemos juntos el plan y el proveedor que más te convenga según tu tráfico, seguridad y crecimiento esperado.</p>
+      <p>
+        <a class="btn" href="mailto:contact@ademasistemas.com?subject=Consulta%20Hosting%20Gestionado">contact@ademasistemas.com</a>
+      </p>
+    </main>
+
+    <div class="footer">
+      <p>&copy; <span id="y"></span> Adema Sistemas. Soluciones Digitales a tu Medida.</p>
+    </div>
+  </div>
+
+  <script>
+    // Completar textos de precios en base a data attributes
+    function format(n){return (Math.round(n*100)/100).toFixed(2)}
+    document.querySelectorAll('[data-plan]').forEach(card=>{
+      const m = Number(card.dataset.month);
+      const y = Number(card.dataset.year); // 10× (2 meses gratis)
+      card.querySelector('[data-year]').textContent = `USD ${y}`;
+      card.querySelector('[data-month]').textContent = `USD ${m}`;
+      card.querySelector('[data-eqm]').textContent = `Equivale a USD ${format(y/12)} /mes`;
+    });
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
